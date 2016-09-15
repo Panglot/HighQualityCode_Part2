@@ -2,19 +2,31 @@
 
 public class SimpleMathExam : Exam
 {
-    public int ProblemsSolved { get; private set; }
+    private int problemsSolved;
+
+    public int ProblemsSolved
+    {
+        get
+        {
+            return this.problemsSolved;
+        }
+        private set
+        {
+            if(value < 0)
+            {
+                throw new ArgumentOutOfRangeException("ProblemsSolved cannot be less than 0!");
+            }
+            else if(value > 10)
+            {
+                throw new ArgumentOutOfRangeException("The limit of the Sample exam is 10. ProblemsSolved cannot be greater than 10.");
+            }
+
+            this.problemsSolved = value;
+        }
+    }
 
     public SimpleMathExam(int problemsSolved)
     {
-        if (problemsSolved < 0)
-        {
-            problemsSolved = 0;
-        }
-        if (problemsSolved > 10)
-        {
-            problemsSolved = 10;
-        }
-
         this.ProblemsSolved = problemsSolved;
     }
 

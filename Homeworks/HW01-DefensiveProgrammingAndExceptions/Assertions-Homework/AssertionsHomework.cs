@@ -6,16 +6,25 @@ class AssertionsHomework
 {
     public static void SelectionSort<T>(T[] arr) where T : IComparable<T>
     {
-        for (int index = 0; index < arr.Length-1; index++)
+        for (int index = 0; index < arr.Length - 1; index++)
         {
             int minElementIndex = FindMinElementIndex(arr, index, arr.Length - 1);
             Swap(ref arr[index], ref arr[minElementIndex]);
         }
     }
-  
-    private static int FindMinElementIndex<T>(T[] arr, int startIndex, int endIndex) 
+
+    private static int FindMinElementIndex<T>(T[] arr, int startIndex, int endIndex)
         where T : IComparable<T>
     {
+        Debug.Assert(startIndex < endIndex, "The starting index cannot be larger than the end index");
+        Debug.Assert(startIndex >= 0, "Starting index cannot be less than zero.");
+        Debug.Assert(endIndex > 0, "End index cannot be less or equal to zero.");
+        Debug.Assert(startIndex < arr.Length - 1, "Start index cannot be greater or equal to the array length");
+        Debug.Assert(endIndex < arr.Length, "End index cannot be greater than array length.");
+
+
+
+
         int minElementIndex = startIndex;
         for (int i = startIndex + 1; i <= endIndex; i++)
         {
@@ -36,12 +45,21 @@ class AssertionsHomework
 
     public static int BinarySearch<T>(T[] arr, T value) where T : IComparable<T>
     {
+        Debug.Assert(value != null, "Search value cannot be null!");
+
         return BinarySearch(arr, value, 0, arr.Length - 1);
     }
 
-    private static int BinarySearch<T>(T[] arr, T value, int startIndex, int endIndex) 
+    private static int BinarySearch<T>(T[] arr, T value, int startIndex, int endIndex)
         where T : IComparable<T>
     {
+        Debug.Assert(startIndex < endIndex, "The starting index cannot be larger than the end index");
+        Debug.Assert(startIndex >= 0, "Starting index cannot be less than zero.");
+        Debug.Assert(endIndex > 0, "End index cannot be less or equal to zero.");
+        Debug.Assert(startIndex < arr.Length - 1, "Start index cannot be greater or equal to the array length");
+        Debug.Assert(endIndex < arr.Length, "End index cannot be greater than array length.");
+        Debug.Assert(value != null, "Search value cannot be null!");
+
         while (startIndex <= endIndex)
         {
             int midIndex = (startIndex + endIndex) / 2;
@@ -54,7 +72,7 @@ class AssertionsHomework
                 // Search on the right half
                 startIndex = midIndex + 1;
             }
-            else 
+            else
             {
                 // Search on the right half
                 endIndex = midIndex - 1;
@@ -80,5 +98,7 @@ class AssertionsHomework
         Console.WriteLine(BinarySearch(arr, 17));
         Console.WriteLine(BinarySearch(arr, 10));
         Console.WriteLine(BinarySearch(arr, 1000));
+
+        Console.WriteLine();
     }
 }
