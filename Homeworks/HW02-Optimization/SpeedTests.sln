@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25123.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P02-SimpleMath", "P02-SimpleMath\P02-SimpleMath.csproj", "{D9D0FE1C-7194-4A0E-868D-7699B44B201B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P03-AdvancedMath", "P03-AdvancedMath\P03-AdvancedMath.csproj", "{68342752-C09B-4C4E-8C9A-FC992C1CD910}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D9D0FE1C-7194-4A0E-868D-7699B44B201B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9D0FE1C-7194-4A0E-868D-7699B44B201B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9D0FE1C-7194-4A0E-868D-7699B44B201B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9D0FE1C-7194-4A0E-868D-7699B44B201B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{68342752-C09B-4C4E-8C9A-FC992C1CD910}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68342752-C09B-4C4E-8C9A-FC992C1CD910}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68342752-C09B-4C4E-8C9A-FC992C1CD910}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68342752-C09B-4C4E-8C9A-FC992C1CD910}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
