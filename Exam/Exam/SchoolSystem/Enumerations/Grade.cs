@@ -1,6 +1,6 @@
 ﻿namespace SchoolSystem.Enumerations
 {
-    internal enum Grade
+    public enum Grade
     {
         First = 1,
         Second,

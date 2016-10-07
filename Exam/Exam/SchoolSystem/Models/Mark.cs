@@ -3,7 +3,7 @@
     using System;
     using Enumerations;
 
-    internal class Mark
+    public class Mark
     {
         private float value;
         private Subject subject;

@@ -5,11 +5,11 @@
     using Enumerations;
     using Models;
 
-    internal class CreateTeacher : ICommand
+    internal class CreateTeacher : Command, ICommand
     {
         private static int id = 0;
 
-        public string Execute(IList<string> parameters)
+        public override string Execute(IList<string> parameters)
         {
             Engine.Teachers.Add(id, new Teacher(parameters[0], parameters[1], (Subject)int.Parse(parameters[2])));
             return string.Format(

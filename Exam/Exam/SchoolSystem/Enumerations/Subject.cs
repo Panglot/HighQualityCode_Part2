@@ -1,6 +1,6 @@
 ﻿namespace SchoolSystem.Enumerations
 {
-    internal enum Subject
+    public enum Subject
     {
         Bulgarian,
         English,

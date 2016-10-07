@@ -3,9 +3,9 @@
     using System.Collections.Generic;
     using Contracts;
 
-    internal class TeacherAddMark : ICommand
+    internal class TeacherAddMark : Command, ICommand
     {
-        public string Execute(IList<string> parameters)
+        public override string Execute(IList<string> parameters)
         {
             var studentId = int.Parse(parameters[0]);
             var teacherId = int.Parse(parameters[1]);

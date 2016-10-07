@@ -1,15 +1,15 @@
-﻿namespace SchoolSystem.Core
+﻿namespace SchoolSystem.Core.Commands
 {
     using System.Collections.Generic;
     using Contracts;
     using Enumerations;
     using Models;
 
-    internal class CreateStudent : ICommand
+    internal class CreateStudent : Command, ICommand
     {
         private static int id = 0;
 
-        public string Execute(IList<string> parameters)
+        public override string Execute(IList<string> parameters)
         {
             Engine.Students.Add(id, new Student(parameters[0], parameters[1], (Grade)int.Parse(parameters[2])));
             return string.Format(

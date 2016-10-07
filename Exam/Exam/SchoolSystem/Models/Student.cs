@@ -4,8 +4,10 @@
     using System.Collections.Generic;
     using System.Linq;
     using Enumerations;
+    using System.Threading;
+    using System.Globalization;
 
-    internal class Student
+    public class Student
     {
         private string firstName;
         private string lastName;
@@ -87,7 +89,7 @@
             }
         }
 
-        internal void AddMark(Mark markToBeAdded)
+        public void AddMark(Mark markToBeAdded)
         {
             if (this.Marks.Count >= 20)
             {
@@ -97,8 +99,9 @@
             this.Marks.Add(markToBeAdded);
         }
 
-        internal string ListMarks()
+        public string ListMarks()
         {
+            Thread.CurrentThread.CurrentCulture = new CultureInfo("en-GB");
             var marksAsList = this.Marks.Select(mark => string.Format("{0} => {1}", mark.Subject, mark.Value)).ToList();
             if (marksAsList.Count == 0)
             {

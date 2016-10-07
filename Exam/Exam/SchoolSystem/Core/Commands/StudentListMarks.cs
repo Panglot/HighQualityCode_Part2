@@ -3,9 +3,9 @@
     using System.Collections.Generic;
     using Contracts;
 
-    internal class StudentListMarks : ICommand
+    internal class StudentListMarks : Command, ICommand
     {
-        public string Execute(IList<string> parameters)
+        public override string Execute(IList<string> parameters)
         {
             return Engine.Students[int.Parse(parameters[0])].ListMarks();
         }

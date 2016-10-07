@@ -3,7 +3,7 @@
     using System;
     using Enumerations;
 
-    internal class Teacher
+    public class Teacher
     {
         private string firstName;
         private string lastName;
