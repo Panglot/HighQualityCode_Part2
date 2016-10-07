@@ -1,0 +1,17 @@
+﻿Bottleneck description: --------------------
+#1: Engine Threat sleep redundant; Line ~95; Removed
+#2: Engine WriteLine parsing from int to string and back to int again redundant; Line ~85; Removed
+
+
+Bug reports: --------------------
+Format: #Bug number - Class name - Bug description
+Example: #1 - PartnerBankingService - The variable "money" at line 36 overflows when you try to add more than 2.1 billion dollars.
+--------
+#1 - Error parsing float due to culture difference; solution: change culture
+#2 - Values of student id and teacher id swapped at TeacherAddMark command; solution: swapped them correctly
+#3 -
+#4 - 
+
+createstudent ivan ivan 3
+createteacher kiro kiro 2
+teacheraddmark 0 0 4.5
