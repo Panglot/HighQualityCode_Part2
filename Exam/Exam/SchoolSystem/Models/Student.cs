@@ -2,10 +2,10 @@
 {
     using System;
     using System.Collections.Generic;
-    using System.Linq;
-    using Enumerations;
-    using System.Threading;
     using System.Globalization;
+    using System.Linq;
+    using System.Threading;
+    using Enumerations;
 
     public class Student
     {
